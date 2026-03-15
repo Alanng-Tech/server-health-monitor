@@ -120,13 +120,6 @@ $watchedServices = @(
 
 ---
 
-## Compatibility
 
-| Environment | Supported |
-|-------------|-----------|
-| Windows 11 Pro | ✅ |
-| Windows 10 Pro | ✅ |
-| Windows Server 2016/2019/2022 | ✅ |
 
----
 
