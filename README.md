@@ -1,14 +1,10 @@
-# ⚡ Windows Server Health Monitor
+# Windows Server Health Monitor
 
 A lightweight, dependency-free PowerShell script that checks the health of a Windows Server (or Windows 10/11 Pro machine) and outputs a color-coded console report — with an optional self-contained HTML report.
 
-![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-blue?logo=powershell)
-![Windows](https://img.shields.io/badge/Windows-10%2F11%20%7C%20Server%202016%2B-0078D6?logo=windows)
-![License](https://img.shields.io/badge/license-MIT-green)
-
 ---
 
-## 📋 What It Monitors
+## What It Monitors
 
 | Category | Details |
 |----------|---------|
@@ -21,7 +17,7 @@ A lightweight, dependency-free PowerShell script that checks the health of a Win
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 > **Requires:** PowerShell 5.1+, run as **Administrator**
 
@@ -38,7 +34,7 @@ Unblock-File -Path ".\Monitor-ServerHealth.ps1"
 
 ---
 
-## 💡 Usage Examples
+## Usage Examples
 
 ```powershell
 # Console output only
@@ -53,7 +49,7 @@ Unblock-File -Path ".\Monitor-ServerHealth.ps1"
 
 ---
 
-## ⚙️ Parameters
+## Parameters
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
@@ -67,17 +63,17 @@ Unblock-File -Path ".\Monitor-ServerHealth.ps1"
 
 ---
 
-## 🖥️ Console Output
+## Console Output
 
 The console output is color-coded:
 
-- 🟢 **Green** — OK
-- 🟡 **Yellow** — WARNING
-- 🔴 **Red** — CRITICAL
+-  **Green** — OK
+-  **Yellow** — WARNING
+-  **Red** — CRITICAL
 
 ---
 
-## 📄 HTML Report
+## HTML Report
 
 When `-HtmlReport` is specified, the script generates a dark-themed, self-contained HTML file with:
 
@@ -92,7 +88,7 @@ No external dependencies — the HTML file works offline.
 
 ---
 
-## ⏰ Scheduled Monitoring (Optional)
+## Scheduled Monitoring (Optional)
 
 To run automatically on a schedule, create a Windows Task Scheduler job:
 
@@ -105,7 +101,7 @@ Register-ScheduledTask -TaskName "ServerHealthCheck" -Action $action -Trigger $t
 
 ---
 
-## 🔧 Customizing Watched Services
+## Customizing Watched Services
 
 Edit the `$watchedServices` array near the top of the script to add or remove services:
 
@@ -124,17 +120,13 @@ $watchedServices = @(
 
 ---
 
-## ✅ Compatibility
+## Compatibility
 
 | Environment | Supported |
 |-------------|-----------|
 | Windows 11 Pro | ✅ |
 | Windows 10 Pro | ✅ |
 | Windows Server 2016/2019/2022 | ✅ |
-| Windows 11 Home | ⚠️ Execution policy restrictions may apply |
 
 ---
 
-## 📜 License
-
-MIT — free to use, modify, and distribute.
