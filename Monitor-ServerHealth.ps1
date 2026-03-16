@@ -1,4 +1,3 @@
-powershell
 $ScriptPath = "$HOME\Downloads\Monitor-ServerHealth.ps1"
 
 $Content = @'
@@ -48,7 +47,13 @@ $htmlReport = @"
 "@
     $ReportPath = "$HOME\Downloads\HealthReport.html"
     $htmlReport | Out-File $ReportPath -Encoding utf8
-    Invoke-Item $ReportPath
+    
+    # NEW: Small pause and then Force-Open with Start-Process
+    Start-Sleep -Seconds 1
+    if (Test-Path $ReportPath) {
+        Write-Host "Opening Report..." -ForegroundColor Green
+        Start-Process "msedge.exe" $ReportPath
+    }
 }
 Monitor-ServerHealth
 '@
