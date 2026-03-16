@@ -1,5 +1,5 @@
 powershell
-$ScriptPath = "$HOME\Downloads\Monitor-ServerHealth_Fixed.ps1"
+$ScriptPath = "$HOME\Downloads\Monitor-ServerHealth.ps1"
 
 $Content = @'
 function Monitor-ServerHealth {
